@@ -1,27 +1,11 @@
-import random
-
-def guess_number():
-    # Generate a random number between 1 and 100
-    secret_number = random.randint(1, 100)
-    
-    # Initialize the number of guesses
-    num_guesses = 0
-    
-    while True:
-        # Get user's guess
-        guess = int(input("Guess a number between 1 and 100: "))
-        
-        # Increment the number of guesses
-        num_guesses += 1
-        
-        # Check if the guess is correct
-        if guess == secret_number:
-            print("Congratulations! You guessed the number in", num_guesses, "guesses.")
-            break
-        elif guess < secret_number:
-            print("Too low! Try again.")
-        else:
-            print("Too high! Try again.")
-
-# Call the function to start the game
-guess_number()
+from tkinter import *
+from tkinter.ttk import *
+master=Tk()
+master.geometry("200x200")
+b1=Button(master,text="click me")
+b1.place(relx=1, x=-2, y=2, anchor=NE)
+l=Label(master,text='i am a label')
+l.place(anchor=NW)
+b2=Button(master,text="click me")
+b2.place(relx=0.5, rely=0.5, anchor=CENTER)
+mainloop()
