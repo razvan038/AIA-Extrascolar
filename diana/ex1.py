@@ -1,11 +1,10 @@
 from tkinter import *
-from tkinter.ttk import *
-master=Tk()
-master.geometry("200x200")
-b1=Button(master,text="click me")
-b1.place(relx=1, x=-2, y=2, anchor=NE)
-l=Label(master,text='i am a label')
-l.place(anchor=NW)
-b2=Button(master,text="click me")
-b2.place(relx=0.5, rely=0.5, anchor=CENTER)
+root=Tk()
+scrollbar=Scrollbar(root)
+scrollbar.pack(side=RIGHT,fill=Y)
+mylist=Listbox(root,yscrollcommand=scrollbar.set)
+for line in range(100):
+    mylist.insert(END,"This is line number"+str(line))
+mylist.pack(side=LEFT,fill=BOTH)
+scrollbar.config(command=mylist.yview)
 mainloop()
