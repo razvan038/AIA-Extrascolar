@@ -35,18 +35,16 @@ public class Tablou {
 //matrice citire tastatura si afisare program
 public class Tablou {
     public static void main(String[] args) throws IOException {
-        // Prompt the user to enter the number of rows
+      
         System.out.println("Introduceti numarul de randuri: ");
         int rows = citesteNr();
         
-        // Prompt the user to enter the number of columns
+       
         System.out.println("Introduceti numarul de coloane: ");
         int cols = citesteNr();
         
-        // Initialize the matrix
         int[][] matrix = new int[rows][cols];
         
-        // Read the matrix elements from the user
         System.out.println("Introduceti elementele matricei: ");
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < cols; j++) {
@@ -54,7 +52,6 @@ public class Tablou {
             }
         }
         
-        // Print the matrix elements
         System.out.println("Elementele matricei sunt: ");
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < cols; j++) {
@@ -64,7 +61,6 @@ public class Tablou {
         }
     }
 
-    // Method to read a number from the console
     public static int citesteNr() throws IOException {
         InputStreamReader isr = new InputStreamReader(System.in);
         BufferedReader br = new BufferedReader(isr);
